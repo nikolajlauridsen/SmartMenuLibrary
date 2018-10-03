@@ -38,5 +38,15 @@ namespace SmartMenuTest {
             Assert.AreEqual("something", points[2, 1]);
             Assert.AreEqual("another", points[3, 1]);
         }
+
+        [TestMethod]
+        public void TestPointTitles() {
+            String[,] points = menu.GetPoints();
+            Assert.AreEqual("Do This", points[0, 0]);
+            Assert.AreEqual("Do That", points[1, 0]);
+            Assert.AreEqual("Do Something", points[2, 0]);
+            Assert.AreEqual("Get the answer to Life, the Universe and Everything", points[3, 0]);
+
+        }
     }
 }
