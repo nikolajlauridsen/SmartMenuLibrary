@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMenuLibrary", "SmartMenuLibrary\SmartMenuLibrary.csproj", "{57648722-3B70-48DA-A0F7-D79C08B16383}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9B6662E-8E5A-4ABE-9D4D-9F43C4FF7355}"
+	ProjectSection(SolutionItems) = preProject
+		SmartMenuLibrary\MenuSpec.txt = SmartMenuLibrary\MenuSpec.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMenuTest", "SmartMenuTest\SmartMenuTest.csproj", "{C4DCF644-2563-4EBE-9ADA-9F7D48219F52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57648722-3B70-48DA-A0F7-D79C08B16383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57648722-3B70-48DA-A0F7-D79C08B16383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57648722-3B70-48DA-A0F7-D79C08B16383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57648722-3B70-48DA-A0F7-D79C08B16383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DCF644-2563-4EBE-9ADA-9F7D48219F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DCF644-2563-4EBE-9ADA-9F7D48219F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DCF644-2563-4EBE-9ADA-9F7D48219F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DCF644-2563-4EBE-9ADA-9F7D48219F52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EDC94C4-27BD-44A8-8817-9044B81B9AE5}
+	EndGlobalSection
+EndGlobal
