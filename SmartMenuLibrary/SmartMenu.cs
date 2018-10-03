@@ -98,9 +98,5 @@ namespace SmartMenuLibrary
         public String[,] GetPoints() {
             return MenuPoints;
         }
-
-        public Bindings GetBinds() {
-            return Binds;
-        }
     }
 }
