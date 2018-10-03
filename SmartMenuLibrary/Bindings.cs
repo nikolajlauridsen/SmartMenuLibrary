@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartMenuLibrary {
-    class Bindings {
+    public class Bindings {
         Dictionary<string, Action> binds;
 
         public Bindings() {

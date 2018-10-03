@@ -10,7 +10,12 @@ namespace SmartMenuLibrary
     {
         private String MenuTitle;
         private String InputDescription;
-        private string[,] menuPoints;
+        private string[,] MenuPoints;
+        private Bindings Binds;
+
+        public SmartMenu(Bindings UserBinds) {
+            Binds = UserBinds;
+        }
 
         public void LoadMenu(string path) {
             // Read the text file
@@ -29,13 +34,13 @@ namespace SmartMenuLibrary
             InputDescription = lines[1];
 
             // Read in menu points.
-            menuPoints = new string[lines.Count - 2, 2];
+            MenuPoints = new string[lines.Count - 2, 2];
             for (int i = 2; i < lines.Count; i++) {
                 string[] split = lines[i].Split(';');
                 // Point title
-                menuPoints[i - 2, 0] = split[0];
+                MenuPoints[i - 2, 0] = split[0];
                 // Point ID
-                menuPoints[i - 2, 1] = split[1];
+                MenuPoints[i - 2, 1] = split[1];
             }
         }
 
@@ -51,8 +56,8 @@ namespace SmartMenuLibrary
                 Console.WriteLine("---------------------");
 
                 // Print all menu titles.
-                for (int i = 0; i < menuPoints.GetLength(0); i++) {
-                    Console.WriteLine("\t" + (i + 1) + ". " + menuPoints[i, 0]);
+                for (int i = 0; i < MenuPoints.GetLength(0); i++) {
+                    Console.WriteLine("\t" + (i + 1) + ". " + MenuPoints[i, 0]);
                 }
                 // Print description and recieve input
                 Console.Write("\n" + InputDescription);
@@ -62,9 +67,9 @@ namespace SmartMenuLibrary
                     RunMenu = false;
                 } else if (int.TryParse(cmd, out selection)) {
                     selection -= 1;
-                    if (selection < menuPoints.GetLength(0)) {
+                    if (selection < MenuPoints.GetLength(0)) {
                         // Call binding here
-                        // Bindings.Call(menuPoints[selection, 1]);
+                        Binds.Call(MenuPoints[selection, 1]);
                     } else {
                         Console.WriteLine("Selection too high, choose number in list");
                     }
@@ -91,7 +96,11 @@ namespace SmartMenuLibrary
         }
 
         public String[,] GetPoints() {
-            return menuPoints;
+            return MenuPoints;
+        }
+
+        public Bindings GetBinds() {
+            return Binds;
         }
     }
 }

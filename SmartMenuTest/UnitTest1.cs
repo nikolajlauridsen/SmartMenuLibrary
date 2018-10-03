@@ -9,7 +9,8 @@ namespace SmartMenuTest {
 
         [TestInitialize] //runs before every test method - sets up a "clean" translator
         public void CreateNewTranslator() {
-            menu = new SmartMenu();
+            menu = new SmartMenu(null);  // Bindings are never actually called so there's no reason to create a Binding object.
+            
             menu.LoadMenu("MenuSpec.txt");
         }
 
@@ -46,7 +47,6 @@ namespace SmartMenuTest {
             Assert.AreEqual("Do That", points[1, 0]);
             Assert.AreEqual("Do Something", points[2, 0]);
             Assert.AreEqual("Get the answer to Life, the Universe and Everything", points[3, 0]);
-
         }
     }
 }
