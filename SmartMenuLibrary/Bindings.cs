@@ -9,7 +9,7 @@ namespace SmartMenuLibrary {
         Dictionary<string, Action> binds;
 
         public Bindings() {
-            binds = new Dictionary<string, Action>;
+            binds = new Dictionary<string, Action>();
         }
 
         public void Bind(String id, Action action) {
