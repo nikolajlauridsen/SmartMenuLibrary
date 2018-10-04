@@ -7,7 +7,7 @@ namespace SmartMenuTest {
     public class UnitTest1 {
         SmartMenu menu;
 
-        [TestInitialize] //runs before every test method - sets up a "clean" translator
+        [TestInitialize]
         public void CreateNewTranslator() {
             menu = new SmartMenu(null);  // Bindings are never actually called so there's no reason to create a Binding object.
             
