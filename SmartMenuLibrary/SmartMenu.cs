@@ -11,9 +11,10 @@ namespace SmartMenuLibrary
         private String MenuTitle;
         private String InputDescription;
         private string[,] MenuPoints;
-        private Bindings Binds;
+        private IBindings Binds;
+        public string lang;
 
-        public SmartMenu(Bindings UserBinds) {
+        public SmartMenu(IBindings UserBinds) {
             Binds = UserBinds;
         }
 

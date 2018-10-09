@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartMenuLibrary {
-    public class Bindings {
-        Dictionary<string, Action> binds;
+    public class Bindings : IBindings {
+        private Dictionary<string, Action> binds;
 
         public Bindings() {
             binds = new Dictionary<string, Action>();
